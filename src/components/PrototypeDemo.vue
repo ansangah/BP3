@@ -4,8 +4,8 @@
       <p class="badge">Prototype Pattern</p>
       <h1>Creative Brief Lab</h1>
       <p class="lead">
-        Pick a base brief, clone it instantly, and tweak only what changes. The
-        rest is copied from the original prototype.
+        기본 브리프 중 하나를 골라 복제한 뒤, 필요한 부분만 바꾸면 됩니다.
+        바꾸지 않은 속성은 원본에서 그대로 가져와 자연스럽게 이어집니다.
       </p>
     </header>
 
@@ -41,49 +41,49 @@
           class="ghost-btn"
           @click="selectedPrototypeIndex = index"
         >
-          Use this base
+          이 브리프 선택
         </button>
       </article>
     </div>
 
     <form class="clone-form" @submit.prevent="cloneBrief">
       <div>
-        <h2>Clone & mutate</h2>
+        <h2>복제 및 수정</h2>
         <p>
-          Selected base
+          선택한 기본 브리프:
           <strong>{{ activeBrief?.name }}</strong>
         </p>
       </div>
       <label>
-        New name
-        <input v-model="mutationForm.name" placeholder="Aurora onboarding v2" />
+        새 이름
+        <input v-model="mutationForm.name" placeholder="오로라 온보딩 v2" />
       </label>
       <label>
-        Tone
-        <input v-model="mutationForm.tone" placeholder="Energetic" />
+        톤
+        <input v-model="mutationForm.tone" placeholder="활기찬" />
       </label>
       <label>
-        Keywords (comma separated)
+        키워드 (쉼표로 구분)
         <input
           v-model="mutationForm.keywords"
-          placeholder="trust, remote, async"
+          placeholder="신뢰, 원격, 비동기"
         />
       </label>
       <label>
-        Deliverables (comma separated)
+        산출물 (쉼표로 구분)
         <input
           v-model="mutationForm.deliverables"
-          placeholder="Hero illustration, Social teaser"
+          placeholder="히어로 일러스트, 소셜 티저"
         />
       </label>
-      <button class="primary-btn" type="submit">Clone prototype</button>
+      <button class="primary-btn" type="submit">브리프 복제하기</button>
     </form>
 
     <section v-if="createdBriefs.length" class="clones">
-      <h2>Cloned briefs</h2>
+      <h2>복제된 브리프</h2>
       <p class="subtle">
-        Each card is a shallow copy of the selected prototype with only the
-        overridden fields changed.
+        각 카드는 선택한 프로토타입을 얕은 복사한 결과이며, 입력한 값만 덮어써서
+        어떤 부분이 바뀌었는지 한눈에 볼 수 있습니다.
       </p>
       <div class="clone-grid">
         <article

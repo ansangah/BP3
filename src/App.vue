@@ -1,27 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div id="app">
+    <RouterView />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import { RouterView } from "vue-router";
 
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
+    RouterView,
   },
 });
 </script>
 
 <style>
+:root {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #edf1f5;
+  color: #0f172a;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }
 </style>
