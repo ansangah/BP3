@@ -1,4 +1,4 @@
-# Design Patterns Lab (Vue + TypeScript)
+# Design Patterns 실습 (Vue + TypeScript)
 
 Vue 3 + TypeScript로 구현한 인터랙티브 실습 페이지입니다.
 
@@ -21,7 +21,7 @@ Vue 3 + TypeScript로 구현한 인터랙티브 실습 페이지입니다.
 
 
 
-## 디렉터리 구조 (발췌)
+## 디렉터리 구조
 
 ```
 src/
